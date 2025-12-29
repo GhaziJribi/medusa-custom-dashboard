@@ -46,7 +46,7 @@ const MainSidebar = () => {
           </div>
         </div>
         <div className="flex flex-1 flex-col justify-between">
-          <div className="flex flex-1 flex-col py-3">
+          <div className="flex flex-1 flex-col py-3 gap-y-1">
             <CoreRouteSection />
             <ExtensionRouteSection />
           </div>
