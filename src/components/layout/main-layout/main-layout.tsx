@@ -46,7 +46,7 @@ const MainSidebar = () => {
           </div>
         </div>
         <div className="flex flex-1 flex-col justify-between">
-          <div className="flex flex-1 flex-col">
+          <div className="flex flex-1 flex-col py-3">
             <CoreRouteSection />
             <ExtensionRouteSection />
           </div>
@@ -294,7 +294,7 @@ const CoreRouteSection = () => {
   })
 
   return (
-    <nav className="flex flex-col gap-y-1 py-3">
+    <nav className="flex flex-col gap-y-1">
       <Searchbar />
       {coreRoutes.map((route) => {
         return <NavItem key={route.to} {...route} />
@@ -313,7 +313,7 @@ const ExtensionRouteSection = () => {
   }
 
   return (
-    <nav className="flex flex-col gap-y-1 py-3">
+    <nav className="flex flex-col gap-y-1">
       {menuItems.map((item, i) => (
         <NavItem
           key={i}
