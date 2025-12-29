@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# Custom Medusa Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a **customized Medusa dashboard**. All UI-related customizations and overrides are implemented here, isolated from the core Medusa backend project.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The main Medusa project integrates this dashboard automatically via a **postinstall script**. During installation, the script performs the following steps:
 
-## Expanding the ESLint configuration
+1. Clones this repository
+2. Builds the customized dashboard
+3. Applies the customization to the installed Medusa dashboard package by:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   * Copying only the `src` and `dist` folders
+   * Cleaning the Vite cache to ensure changes are properly applied
 
-- Configure the top-level `parserOptions` property like this:
+This approach allows us to keep UI customizations versioned and maintainable without directly modifying the core Medusa repository.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Version Support ⚠️
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+> **Important:**
+> This custom dashboard currently supports **Medusa v2.10.3 only**.
+
+Compatibility with other Medusa versions is **not guaranteed** at this time.
+
+## Notes
+
+* All UI changes **must be implemented in this repository**
+* Backend logic and configuration remain in the main Medusa project
+* Any upgrade of Medusa requires validation and potential adjustments to this dashboard
