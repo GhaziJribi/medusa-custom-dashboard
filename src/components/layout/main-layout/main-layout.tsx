@@ -1,12 +1,10 @@
 import {
   BuildingStorefront,
   Buildings,
-  ChevronDownMini,
   CogSixTooth,
   CurrencyDollar,
   EllipsisHorizontal,
   MagnifyingGlass,
-  MinusMini,
   OpenRectArrowOut,
   ReceiptPercent,
   ShoppingCart,
@@ -15,7 +13,6 @@ import {
   Users,
 } from "@medusajs/icons"
 import { Avatar, Divider, DropdownMenu, Text, clx } from "@medusajs/ui"
-import { Collapsible as RadixCollapsible } from "radix-ui"
 import { useTranslation } from "react-i18next"
 
 import { useStore } from "../../../hooks/api/store"
@@ -286,7 +283,7 @@ const CoreRouteSection = () => {
   const { getMenu } = useExtension()
 
   const menuItems = getMenu("coreExtensions")
-
+  
   menuItems.forEach((item) => {
     if (item.nested) {
       const route = coreRoutes.find((route) => route.to === item.nested)
@@ -307,7 +304,6 @@ const CoreRouteSection = () => {
 }
 
 const ExtensionRouteSection = () => {
-  const { t } = useTranslation()
   const { getMenu } = useExtension()
 
   const menuItems = getMenu("coreExtensions").filter((item) => !item.nested)
@@ -317,44 +313,18 @@ const ExtensionRouteSection = () => {
   }
 
   return (
-    <div>
-      <div className="px-3">
-        <Divider variant="dashed" />
-      </div>
-      <div className="flex flex-col gap-y-1 py-3">
-        <RadixCollapsible.Root defaultOpen>
-          <div className="px-4">
-            <RadixCollapsible.Trigger asChild className="group/trigger">
-              <button className="text-ui-fg-subtle flex w-full items-center justify-between px-2">
-                <Text size="xsmall" weight="plus" leading="compact">
-                  {t("app.nav.common.extensions")}
-                </Text>
-                <div className="text-ui-fg-muted">
-                  <ChevronDownMini className="group-data-[state=open]/trigger:hidden" />
-                  <MinusMini className="group-data-[state=closed]/trigger:hidden" />
-                </div>
-              </button>
-            </RadixCollapsible.Trigger>
-          </div>
-          <RadixCollapsible.Content>
-            <nav className="flex flex-col gap-y-0.5 py-1 pb-4">
-              {menuItems.map((item, i) => {
-                return (
-                  <NavItem
-                    key={i}
-                    to={item.to}
-                    label={item.label}
-                    icon={item.icon ? item.icon : <SquaresPlus />}
-                    items={item.items}
-                    type="extension"
-                  />
-                )
-              })}
-            </nav>
-          </RadixCollapsible.Content>
-        </RadixCollapsible.Root>
-      </div>
-    </div>
+    <nav className="flex flex-col gap-y-1 py-3">
+      {menuItems.map((item, i) => (
+        <NavItem
+          key={i}
+          to={item.to}
+          label={item.label}
+          icon={item.icon || <SquaresPlus />}
+          items={item.items}
+          type="core"
+        />
+      ))}
+    </nav>
   )
 }
 
