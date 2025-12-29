@@ -395,6 +395,10 @@
   "sales_channels": {
     "availableIn": "Available in <0>{{x}}</0> of <1>{{y}}</1> sales channels"
   },
+  "home": {
+    "domain": "Home",
+    "welcome": "Welcome to the homepage"
+  },
   "products": {
     "domain": "Products",
     "list": {

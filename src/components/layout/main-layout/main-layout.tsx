@@ -11,6 +11,7 @@ import {
   SquaresPlus,
   Tag,
   Users,
+  House,
 } from "@medusajs/icons"
 import { Avatar, Divider, DropdownMenu, Text, clx } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
@@ -176,6 +177,12 @@ const useCoreRoutes = (): Omit<INavItem, "pathname">[] => {
   const { t } = useTranslation()
 
   return [
+    {
+      icon: <House />,
+      label: t("home.domain"),
+      to: "/",
+      items: [],
+    },
     {
       icon: <ShoppingCart />,
       label: t("orders.domain"),

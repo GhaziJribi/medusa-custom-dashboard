@@ -1514,6 +1514,21 @@
       "required": ["availableIn"],
       "additionalProperties": false
     },
+    "home": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string"
+        },
+        "welcome" : {
+          "type" : "string"
+        }
+      },
+      "required": [
+        "domain"
+      ],
+      "additionalProperties": false
+    },
     "products": {
       "type": "object",
       "properties": {

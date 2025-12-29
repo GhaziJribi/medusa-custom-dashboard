@@ -382,6 +382,10 @@
   "sales_channels": {
     "availableIn": "Disponible dans <0>{{x}}</0> canaux de vente sur <1>{{y}}</1>"
   },
+  "home": {
+    "domain": "Accueil",
+    "welcome": "Bienvenue sur la page d’accueil"
+  },
   "products": {
     "domain": "Produits",
     "list": {
