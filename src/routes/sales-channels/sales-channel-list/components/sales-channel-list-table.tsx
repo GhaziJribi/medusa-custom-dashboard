@@ -22,7 +22,7 @@ type SalesChannelWithIsDefault = HttpTypes.AdminSalesChannel & {
   is_default?: boolean
 }
 
-const PAGE_SIZE = 20
+const PAGE_SIZE = 10
 
 export const SalesChannelListTable = () => {
   const { t } = useTranslation()

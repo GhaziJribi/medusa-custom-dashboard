@@ -29,7 +29,7 @@ const AddProductsToSalesChannelSchema = zod.object({
   product_ids: zod.array(zod.string()).min(1),
 })
 
-const PAGE_SIZE = 50
+const PAGE_SIZE = 10
 
 export const AddProductsToSalesChannelForm = ({
   salesChannel,

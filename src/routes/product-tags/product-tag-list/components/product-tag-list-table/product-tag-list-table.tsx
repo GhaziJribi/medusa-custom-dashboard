@@ -17,7 +17,7 @@ import { useDataTable } from "../../../../../hooks/use-data-table"
 import { useDeleteProductTagAction } from "../../../common/hooks/use-delete-product-tag-action"
 import { productTagListLoader } from "../../loader"
 
-const PAGE_SIZE = 20
+const PAGE_SIZE = 10
 
 export const ProductTagListTable = () => {
   const { t } = useTranslation()

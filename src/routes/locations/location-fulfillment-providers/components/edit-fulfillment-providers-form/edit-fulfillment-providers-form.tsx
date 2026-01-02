@@ -33,7 +33,7 @@ const EditFulfillmentProvidersFormSchema = zod.object({
   fulfillment_providers: zod.array(zod.string()).optional(),
 })
 
-const PAGE_SIZE = 50
+const PAGE_SIZE = 10
 
 export const LocationEditFulfillmentProvidersForm = ({
   location,

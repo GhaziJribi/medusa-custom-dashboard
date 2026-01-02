@@ -53,7 +53,7 @@ const CreateRegionSchema = zod.object({
 })
 
 const PREFIX = "cr"
-const PAGE_SIZE = 50
+const PAGE_SIZE = 10
 
 const STACKED_MODAL_ID = "countries-modal"
 

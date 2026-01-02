@@ -13,7 +13,7 @@ import { ConfigurableOrderListTable } from "./configurable-order-list-table"
 
 import { DEFAULT_FIELDS } from "../../const"
 
-const PAGE_SIZE = 20
+const PAGE_SIZE = 10
 
 export const OrderListTable = () => {
   const { t } = useTranslation()

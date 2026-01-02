@@ -23,7 +23,7 @@ type PriceListProductsFormProps = {
   form: UseFormReturn<PricingCreateSchemaType>
 }
 
-const PAGE_SIZE = 50
+const PAGE_SIZE = 10
 const PREFIX = "p"
 
 function getInitialSelection(products: { id: string }[]) {

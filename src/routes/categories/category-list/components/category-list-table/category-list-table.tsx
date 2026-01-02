@@ -15,7 +15,7 @@ import { useDeleteProductCategoryAction } from "../../../common/hooks/use-delete
 import { useCategoryTableColumns } from "./use-category-table-columns"
 import { useCategoryTableQuery } from "./use-category-table-query"
 
-const PAGE_SIZE = 20
+const PAGE_SIZE = 10
 
 export const CategoryListTable = () => {
   const { t } = useTranslation()

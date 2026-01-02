@@ -19,7 +19,7 @@ import { usePromotionTableQuery } from "../../../../../hooks/table/query/use-pro
 import { useDataTable } from "../../../../../hooks/use-data-table"
 import { promotionsLoader } from "../../loader"
 
-const PAGE_SIZE = 20
+const PAGE_SIZE = 10
 
 export const PromotionListTable = () => {
   const { t } = useTranslation()

@@ -21,7 +21,7 @@ import { productsLoader } from "../../loader"
 import { useFeatureFlag } from "../../../../../providers/feature-flag-provider"
 import { ConfigurableProductListTable } from "./configurable-product-list-table"
 
-const PAGE_SIZE = 20
+const PAGE_SIZE = 10
 
 export const ProductListTable = () => {
   const { t } = useTranslation()
